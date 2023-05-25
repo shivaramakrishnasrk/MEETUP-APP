@@ -1,0 +1,87 @@
+
+{{!-- <link rel="stylesheet" type="text/css" href="/public/css/matches.css"> --}}
+
+	<div class="container text-center">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/home/{{user._id}}">Meetup</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link btn btn-primary" href="/home/{{user._id}}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-success" href="/matches/{{user._id}}">Matches</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-info" href="/potentialMatches/{{user._id}}?distance=all">Potential Matches</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-warning" href="/profile/{{user._id}}">Profile</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-secondary" href="/messages/{{user._id}}/messages">Messages</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-danger" href="/logout">Logout</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-light" href="/delete/{{user._id}}">Delete Account</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+
+{{!-- homepage View --}}
+
+<div class="container mt-4">
+    <h1>Welcome to Meeting App</h1>
+    <p>Discover your perfect match today!</p>
+
+    <div class="card-deck mt-4">
+      <div class="card">
+        <img src="/public/static_images/navbar_find_matches.png" alt="Matches Picture">
+        <div class="card-body">
+          <h2 class="card-title"><a href="/potentialMatches/{{user._id}}?distance=all">Find Matches</a></h2>
+          <p class="card-text">Browse our collection of potential matches and start chatting with someone special.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/public/static_images/navbar_your_matches.png" alt="Matches Picture">
+        <div class="card-body">
+          <h2 class="card-title"><a href="/matches/{{user._id}}">Your Matches</a></h2>
+          <p class="card-text">Browse through people who you have matched with</p>
+      </div>
+      </div>
+      <div class="card">
+        <img src="/public/static_images/navbar_your_profile.png" alt="Profile Picture">
+        <div class="card-body">
+          <h2 class="card-title"><a href="/profile/{{user._id}}">Your Profile</a></h2>
+          <p class="card-text">Tell us about yourself and what you're looking for.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/public/static_images/navbar_messages.png" alt="Messages Icon">
+        <div class="card-body">
+          <h2 class="card-title" > <a href="/messages/{{user._id}}/messages">Messages</a></h2>
+          <p class="card-text">Connect with someone special and start your journey towards meaningful relationships.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="mt-4 text-center">
+    <p>&copy; 2023 Meeting App. All Rights Reserved.</p>
+  </footer>
+   {{!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> --}}
+   <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Homepage delete JS -->
+	<script src="/public/js/homepage_delete.js"></script>

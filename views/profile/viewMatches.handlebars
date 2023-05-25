@@ -1,0 +1,74 @@
+
+
+<div class="container text-center">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/home/{{user._id}}">Meetup</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link btn btn-primary" href="/home/{{user._id}}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-success" href="/matches/{{currUserId}}">Matches</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-info" href="/potentialMatches/{{currUserId}}?distance=all">Potential Matches</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-warning" href="/profile/{{currUserId}}">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-secondary" href="/messages/{{currUserId}}/messages">Messages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn btn-danger" href="/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+<br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h1>Potential Match Profile</h1>
+        </div>
+        <div class="card-body">
+          {{#if user.image.path}}
+            <img src="/{{user.image.destination}}/{{user.image.filename}}" alt="Profile image">
+          {{else}}
+            <p>No image uploaded</p>
+          {{/if}}
+          <p>Name: {{user.name}}</p>
+          <p>Age: {{user.age}}</p>
+          <p>City: {{user.city_name}}</p>
+          <p>Bio: {{user.bio}}</p>
+          {{#if user.university}}
+            <p>{{user.name}} goes/went to <strong>{{{user.university}}}</strong></p>
+          {{/if}}
+          {{#if user.work}}
+            <p>{{user.name}} works at <strong>{{user.work}}</strong></p>
+          {{/if}}
+          {{#if user.gym}}
+            <p>{{user.name}} works out at <strong>{{user.gym}}</strong></p>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="/public/js/homepage_delete.js"></script>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS file -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

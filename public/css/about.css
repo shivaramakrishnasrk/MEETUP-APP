@@ -1,0 +1,31 @@
+/* Center and enlarge the navbar brand */
+.navbar-brand {
+  display: block;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+/* Style the "What We Do" and "Features" headings */
+.col-md-6 h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Style the "Features" list */
+.col-md-6 ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+/* Style the login and register buttons */
+.btn-outline-dark {
+  color: #212529;
+  border-color: #212529;
+  background-color: transparent;
+}
+
+.btn-outline-dark:hover {
+  background-color: #212529;
+  color: #fff;
+}

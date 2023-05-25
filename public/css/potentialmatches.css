@@ -1,0 +1,232 @@
+ /* body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0077c0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+} */
+
+/* ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} */
+
+/* button {
+  background-color: #0077c0;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #005ea3;
+}
+
+input[type="text"] {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 300px;
+} */
+
+/* Page-specific styles */
+  
+  /* Matches page */
+  /* #distanceToggleContainer {
+    margin: 20px 0;
+  }
+  
+  #distanceToggleContainer button {
+    margin-right: 20px;
+  } */
+  
+  /* ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  /* li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    padding: 20px;
+  } */
+  
+  /* li h2 {
+    margin: 0 0 10px;
+  }
+  
+  li img {
+    border-radius: 50%;
+    height: 150px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    width: 150px;
+  }
+  
+  li p {
+    margin: 0 0 10px;
+  }
+  
+  li a {
+    background-color: #0077c0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+  }
+  
+  li form {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  li form button {
+    background-color: #e20000;
+    margin-left: 10px;
+  } */
+  
+  /* Potential matches page */
+  /* #showAllProfilesButton,
+  #showWithin5kmButton {
+    background-color: #0077c0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+  }
+  
+  #showAllProfilesButton:hover,
+  #showWithin5kmButton:hover {
+    background-color: #005ea3;
+  }
+
+
+#user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#user-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#user-card p {
+  margin-bottom: 10px;
+}
+
+#navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#navigation-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#navigation-buttons button:hover {
+  background-color: #555;
+}  */
+
+/*New*/
+
+.like-dislike-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.like-button, .dislike-button {
+  width: 120px;
+  height: 50px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.like-button {
+  background-color: #004b02;
+}
+
+.dislike-button {
+  background-color: #a40b00;
+}
+
+.like-button:hover, .dislike-button:hover {
+  transform: scale(1.1);
+}
+
+
+  .profile-pix {
+  width: 300px; /* increase the width to 300px */
+  height: 300px; /* increase the height to 300px */
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto; /* center the image horizontally */
+  display: block; /* make the image a block element */
+  margin-bottom: 20px;
+}
+
+  .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .common-attribute {
+    background-color: #f0f76a;
+    color: #000000f9;
+  }

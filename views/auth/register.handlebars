@@ -1,0 +1,89 @@
+  <div class="container my-5">
+    <h1 class="text-center">Registration</h1>
+    <div class="alert alert-danger" role="alert" id="error" hidden>
+      <p class="p1">Wrong Input!</p>
+    </div>
+
+    <form method="POST" id="myForm" action="/register" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" >
+        <div id="email-status"></div>
+        <span id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password (at least 8 characters, 1 uppercase, 1 lowercase, 1 number):</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder= "> 8 characters with at least 1 uppercase,lowercase and number each"  >
+      </div>
+
+      <div class="form-group">
+        <label for="confpassword">Confirm Password:</label>
+        <input type="password" id="confpassword" name="confpassword" class="form-control" placeholder="Enter same password as above" >
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" class="form-control" placeholder="Should be atleast 18" >
+      </div>
+
+      <div class="form-group">
+        <label for="zip_code">Zip Code:</label>
+        <input type="number" id="zip_code" name="zip_code" class="form-control" placeholder="Enter a valid US zip eg: 10010" >
+      </div>
+
+      <div class="form-group">
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" class="form-control" placeholder="Share a little bit about yourself and your interests..." ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="image">Profile Picture:</label>
+        <input type="file" id="image" name="image" class="form-control-file" >
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" class="form-control">
+          <option value="prefer not to say" selected>Prefer not to say</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+    <div class="form-group">
+      <label for="colleges">University:</label>
+      <select id="colleges" name="colleges" class="form-control"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="company">Place of Work:</label>
+      <input type="text" id="company" name="company" placeholder="eg: google" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="place">A place you want to visit:</label>
+      <select name="place" id="place" class="form-control"></select><br><br>
+    </div>
+
+    <div class="form-group">
+      <label for="gym">Your gym/class:</label>
+      <select name="gym" id="gym" class="form-control"></select><br><br>
+    </div>
+
+    <button type="submit" id="registerBtn" value="Register" class="btn btn-outline-dark btn-lg">Register</button>
+    </form>
+  </div>
+  <div class="text-center">
+      <a href="/login" class="btn btn-outline-dark btn-lg">Already Registered? Login</a>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="/public/js/register.js"></script>

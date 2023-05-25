@@ -1,0 +1,98 @@
+
+
+<div class="container text-center">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/home/{{userId}}">Meetup</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link btn btn-primary" href="/home/{{userId}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-success" href="/matches/{{userId}}">Matches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-info" href="/potentialMatches/{{userId}}?distance=all">Potential Matches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-warning" href="/profile/{{userId}}">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-secondary" href="/messages/{{userId}}/messages">Messages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-danger" href="/logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div> 
+
+<br><br>
+
+<h1>Potential Matches</h1>
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <div id="distanceToggleContainer">
+        <button class="btn btn-primary" id="showAllProfilesButton" style="color: black" onclick="showAllProfiles()">Show all profiles with some commonality</button>
+        <button class="btn btn-primary" id="showWithin5kmButton" style="color: black" onclick="showProfilesWithin5km()">Show profiles within 5km radius only</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+{{!-- class="d-flex justify-content-center" --}}
+<div class="card">
+  <div>
+    {{#if users}}
+    <img class="profile-pix" src="/{{users.[0].image.destination}}/{{users.[0].image.filename}}" alt="Profile image">
+      <div class="card-body">
+        <h2 class="card-title">{{users.[0].name}}, {{users.[0].age}}</h2>
+        <p class="card-text">{{users.[0].bio}}</p>
+        <p class="card-text">A place I want to visit: {{users.[0].bucketlist}}</p>
+        {{#if users.[0].u}}
+        <p class="card-text">You both went to <span class="common-attribute">{{{users.[0].university}}}</span></p>
+        {{/if}}
+        {{#if users.[0].w}}
+        <p class="card-text">You both work at <span class="common-attribute">{{{users.[0].work}}}</span></p>
+        {{/if}}
+        {{#if users.[0].g}}
+        <p class="card-text">You both workout at <span class="common-attribute">{{{users.[0].gym}}}</span></p>
+        {{/if}}
+        
+        <div class="text-center">
+        <a href="/potentialMatchesProfile/{{users.[0]._id}}" class="btn btn-dark">View Profile</a>
+        <br> <br>
+        <div class="like-dislike-container">
+          <form class="card-body d-inline" method="POST" action="/potentialMatches/{{users.[0]._id}}/like?distance={{distance}}">
+          <button type="submit" class="like-button">Like</button>
+          </form>
+          <form class="card-body d-inline" method="POST" action="/potentialMatches/{{users.[0]._id}}/dislike?distance={{distance}}">
+          <button type="submit" class="dislike-button">Dislike</button>
+          </form>
+        </div>
+
+        <br>
+      </div>
+      </div>
+    {{else}}
+    <div class="card-body">
+      <p class="card-text">No potential matches found.</p>
+    </div>
+    {{/if}}
+  </div>
+</div>
+
+<script src="/public/js/potentialMatch.js"></script>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS file -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

@@ -1,0 +1,167 @@
+  .card-img-top {
+    object-fit: cover;
+    height: 300px; /* set the height to desired size for square view */
+    width: 100%; /* set the width to 100% to fill the container */
+    border-radius: 0; /* add this to remove the curved effect */
+    border: #333;
+  }
+  #user-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* set the height to 100% viewport height */
+  }
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style for the header */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Style for the form */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+/* Style for the form labels */
+label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* added border */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Style for the radio buttons */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Style for the error message */
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style for the button */
+.button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: 10px; /* added margin to the bottom */
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Style for links as buttons */
+a.button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.button:hover {
+  background-color: #555;
+}
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 2rem auto;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+#distanceToggleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#showAllProfilesButton,
+#showWithin5kmButton {
+  background-color: #fff;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#showWithin5kmButton.active {
+  background-color: #ff69b4;
+  color: #fff;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+  text-align: center;
+}
